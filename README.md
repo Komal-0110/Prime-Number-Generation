@@ -56,15 +56,19 @@ This project provides a robust and efficient prime number generator accessible v
 Start the Flask server:
 ```bash
 python app.py
+```
 
 The server will run on : 
 ```bash
 http://127.0.0.1:5000/
+```
 
 For run command line interface : 
 ```bash
 python PrimeNumberGeneration.py
+```
 
 For run Unit Test interface : 
 ```bash
 python UnitTestCase.py
+```
