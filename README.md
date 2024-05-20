@@ -17,6 +17,7 @@ This project provides a robust and efficient prime number generator accessible v
 
 - Python 3.8+
 - Flask
+- pymongo
 - MongoDB
 
 ## Installation
@@ -37,6 +38,16 @@ This project provides a robust and efficient prime number generator accessible v
     ```bash
     pip install -r requirements.txt
     ```
+4. Set up the `.env` file:
+    - Create a file named `.env` in the root directory of the project.
+    - Add the following environment variables to the `.env` file:
+      ```
+      MONGODB_PWD=add mongodb password
+      MONGODB_NAME=add mongodb username
+      SECRET_KEY=add secret key
+      ```
+
+    Replace `MONGODB_PWD` with the actual MongoDB Password and `mongodb name` with the name of your MongoDB username.
 
 ## Usage
 
@@ -45,3 +56,15 @@ This project provides a robust and efficient prime number generator accessible v
 Start the Flask server:
 ```bash
 python app.py
+
+The server will run on : 
+```bash
+http://127.0.0.1:5000/
+
+For run command line interface : 
+```bash
+python PrimeNumberGeneration.py
+
+For run Unit Test interface : 
+```bash
+python UnitTestCase.py
