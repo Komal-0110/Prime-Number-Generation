@@ -1,0 +1,11 @@
+import unittest
+from PrimeNumberGeneration import *
+
+class TestPrimeFunction(unittest.TestCase):
+    def test_Unit(self):
+        self.assertEqual([2, 3, 5, 7], [x for x in range(1, 10) if prime_find_using_brute_force(x)])
+        self.assertEqual([2, 3, 5, 7], [x for x in range(1, 10) if prime_find_using_optimized(x)])
+        self.assertEqual([2, 3, 5, 7],  prime_find_using_sieve_of_eratosthenes(1, 10))
+        
+if __name__ == "__main__":
+    unittest.main()
