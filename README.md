@@ -36,6 +36,7 @@ This project provides a robust and efficient prime number generator accessible v
 
 3. Install the required packages:
     ```bash
+    cd server
     pip install -r requirements.txt
     ```
 4. Set up the `.env` file:
