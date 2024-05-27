@@ -16,10 +16,10 @@ class SignUp(Resource):
         
         if not username or not email or not password:
             return {"error": "Please fill all the inputs."}, 400
-        print("Before error check")
+        
         if UserModel.find_by_email(email=email):
             return {"error" : "Please fill all the inputs"}, 400
-        print("After error check")
+        
         
         hash_password = bcrypt.generate_password_hash(password).decode('utf-8')
 
