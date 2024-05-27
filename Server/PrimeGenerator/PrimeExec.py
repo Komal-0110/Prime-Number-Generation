@@ -2,7 +2,7 @@ from flask_restful import Resource
 from .PrimeGenerate import PrimeGenerate 
 from Model.ExecutionModel import ExecutionModel
 from Model.UserModel import UserModel
-from flask import request, session
+from flask import request
 import time
 
 class AllModelsRun(Resource):

@@ -25,7 +25,13 @@ class SignIn(Resource):
                     "email": existing_user_by_email["email"],
                     
                 }), 201)
-                response.set_cookie('Authorization', 'Bearer ' + res, httponly=True, secure=True)
+                response.set_cookie(
+                    'Authorization',
+                    f'Bearer {res}',
+                    httponly=True,
+                    secure=False, 
+                    samesite='Lax'
+                )
 
                 return response
             else:

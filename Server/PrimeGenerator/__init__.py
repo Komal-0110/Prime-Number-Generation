@@ -6,3 +6,4 @@ from .PrimeUsingSieveErot import PrimeUsingSieveErot
 from .PrimeUsingOptimizedSieveOfErato import PrimeUsingOptimizedSieveOfErato
 from .PrimeUsingSegmentedSieve import PrimeUsingSegmentedSieve
 from .PrimeUsingSieveOfSundaram import PrimeUsingSieveOfSundaram
+from .GetPrimeAlgorithms import GetAllAlgorithm

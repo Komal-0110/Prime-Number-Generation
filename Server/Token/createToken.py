@@ -15,7 +15,7 @@ def encode_auth_token(user_id):
     
     try:
         payload = {
-            'exp': datetime.datetime.utcnow() + datetime.timedelta(seconds=3600),
+            'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=24, minutes=5, seconds=3600),
             'iat': datetime.datetime.utcnow(),
             'sub': str(user_id)
         }
