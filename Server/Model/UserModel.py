@@ -19,11 +19,6 @@ class UserModel:
         user_exists = collection.find_one(myquery)
         return user_exists
             
-
-    @classmethod
-    def delete_by_id(cls, id: int):
-        myquery = {'id': id}
-        collection.delete_one(myquery)
         
     def save_to_db(self):
         result = collection.insert_one({
@@ -36,11 +31,4 @@ class UserModel:
 
         return inserted_document["_id"]
             
-    def update_information(self):
-        new_values = {'$set': self.json()}
-        collection.update_one({'id': self.id}, new_values)
-
-    @classmethod
-    def get_all_users(cls):
-        users = collection.find({}, {'_id': False})
-        return list(users)
+   

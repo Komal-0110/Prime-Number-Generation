@@ -18,7 +18,7 @@ class SignUp(Resource):
             return {"error": "Please fill all the inputs."}, 400
         
         if UserModel.find_by_email(email=email):
-            return {"error" : "Please fill all the inputs"}, 400
+            return {"error" : "User is already exist."}, 400
         
         
         hash_password = bcrypt.generate_password_hash(password).decode('utf-8')

@@ -1,11 +1,9 @@
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 from flask_restful import Api
 from flask import Flask, request, jsonify, make_response
-from dotenv import load_dotenv, find_dotenv
 from Authentication import SignUp, SignIn, SignOut
 from PrimeGenerator import AllModelsRun, GetAllAlgorithm
 
-load_dotenv(find_dotenv())
 
 app = Flask(__name__)
 api = Api(app)

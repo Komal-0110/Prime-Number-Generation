@@ -1,5 +1,5 @@
 from flask_restful import Resource
-from flask import request, jsonify, make_response
+from flask import jsonify, make_response
 
 
 class SignOut(Resource):
